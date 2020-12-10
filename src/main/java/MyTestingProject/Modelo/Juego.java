@@ -9,6 +9,7 @@ public class Juego {
 		int nminas=0;
 		int tablero[][]=tablero2.getTablero();
 		
+		
 		if(intento>0) {
 
 	   		if(tablero[x][y]==0){
@@ -77,10 +78,18 @@ public class Juego {
 	public int getIntento() {
 		return intento;
 	}
+
+	public void setIntento(int intents) {
+		if(intents>0 && intents<=40)
+			intento= intents;
+			else
+			intento=0;
+	}
+	
 	public int getMinas() {
 		return tminas;
 	}
-	public void setIntento(int intents) {
-		intento= intents;
+	public void setMinas(int minas) {
+		tminas=minas;
 	}
 }

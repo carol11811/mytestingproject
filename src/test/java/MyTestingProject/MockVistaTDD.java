@@ -1,78 +1,81 @@
-package MyTestingProject.Vista;
+package MyTestingProject;
 
-import java.util.Scanner;
-public class vista implements vistaI{
-	Scanner leer = new Scanner (System.in);
+
+import MyTestingProject.Vista.vistaITDD;
+
+public class MockVistaTDD implements vistaITDD{
+	int posx=6;
+	int posy=6;
+	int intentos=3;
+	int horizontal=20;
+	int vertical=20;
+
 	@Override
 	public int getHorizontal() {
-		int horizontal;
-		System.out.println("  Ingresa valor tablero horizontal, valor máximo 99, valor mínimo 3");
-		horizontal=leer.nextInt();
+		// TODO Auto-generated method stub
 		return horizontal;
 	}
 
 	@Override
 	public int getVertical() {
-		int vertical;
-		System.out.println("  Ingresa valor tablero vertical, valor máximo 99,valor mínimo 3");
-		vertical=leer.nextInt();
+		// TODO Auto-generated method stub
 		return vertical;
 	}
 
 	@Override
 	public int getPosX() {
-		int horizontal;
-		System.out.println("Fila: ");
-		horizontal=leer.nextInt();
-		return horizontal;
+		// TODO Auto-generated method stub
+		return posx;
 	}
 
 	@Override
 	public int getPosY() {
-		int vertical;
-		System.out.println(" Columna:");
-		vertical=leer.nextInt();
-		return vertical;
+		// TODO Auto-generated method stub
+		return posy;
 	}
 
 	@Override
 	public boolean getAleatorio() {
 		// TODO Auto-generated method stub
-		return true;
+		return false;
 	}
 
 	@Override
 	public int getMinas() {
 		// TODO Auto-generated method stub
-		return 10;
+		return 1;
 	}
 
 	@Override
 	public void setPosX(int x) {
-		// TODO Auto-generated method stub
+		
+		posx=x;
 		
 	}
 
 	@Override
 	public void setposY(int y) {
-		// TODO Auto-generated method stub
+		posy=y;
 		
 	}
 
 	@Override
 	public int getIntentos() {
 		// TODO Auto-generated method stub
-		return 40;
+		
+		return intentos;
 	}
 
 	@Override
 	public void setIntentos(int intentosx) {
 		// TODO Auto-generated method stub
+		intentos=intentosx;
 		
 	}
 
 	@Override
 	public void setVertical(int ver) {
+		vertical=ver;
 		// TODO Auto-generated method stub
 		
 	}
@@ -80,12 +83,10 @@ public class vista implements vistaI{
 	@Override
 	public void setHorizontal(int hor) {
 		// TODO Auto-generated method stub
+		horizontal=hor;
 		
 	}
 
-	
-	
-	
 
-
+	
 }

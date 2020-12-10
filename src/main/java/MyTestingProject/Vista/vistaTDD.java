@@ -1,7 +1,7 @@
 package MyTestingProject.Vista;
 
 import java.util.Scanner;
-public class vista implements vistaI{
+public class vistaTDD implements vistaITDD{
 	Scanner leer = new Scanner (System.in);
 	@Override
 	public int getHorizontal() {
@@ -82,7 +82,6 @@ public class vista implements vistaI{
 		// TODO Auto-generated method stub
 		
 	}
-
 	
 	
 	
