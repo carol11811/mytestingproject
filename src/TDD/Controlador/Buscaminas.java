@@ -41,6 +41,16 @@ public class Buscaminas{
 			   	juego.setMinas(vista.getMinas());
 			   	juego.setIntento(vista.getIntentos());
 			   	do {
+<<<<<<< HEAD:src/TDD/Controlador/Buscaminas.java
+			   		
+			   		empezarJuego(horizontal,vertical,juego);
+			   	
+			   		
+			
+			  }while (juego.getIntento()>=juego.getMinas() && juego.getIntento()>0 && juego.getMinas()>0);	
+			   compruebaGanador(juego);
+			 
+=======
 			   		int x=0,y=0;
 			   	
 			   		
@@ -77,6 +87,7 @@ public class Buscaminas{
 			   	
 			}
 		
+>>>>>>> 67814e00b6476bf2300a3c5fad492847d2adeb5c:src/main/java/MyTestingProject/Controlador/Buscaminas.java
 			}
 		
        
@@ -84,6 +95,42 @@ public class Buscaminas{
 		
  	   }
 	
+	public static void compruebaGanador(Juego juego) {
+	  	if(juego.getMinas()==0)
+	   		System.out.println("		GANASTE!");
+	   	
+	   	if(juego.getMinas()>juego.getIntento())
+	   		System.out.println("		PERDISTE!    (Exceso de minas restantes "+juego.getMinas()+")\n\n");
+	   	
+	   	if(juego.getIntento()==0)
+	   		System.out.println("		PERDISTE!");
+		
+	}
+	
+	
+	public static void empezarJuego(int horizontal,int vertical,Juego juego) {
+		
+		int x=0,y=0;
+		
+   		do{
+   			 System.out.println("\n-x----------------------------------------------------x-");
+   			 System.out.println("\n	Intento :"+juego.getIntento()+" , Cual es su coordenada? \n");
+   			 x=vista.getPosX();
+   			 System.out.println();
+   			 y=vista.getPosY();
+   			x=x-1;
+   	   		y=y-1;
+   			 
+   			 if(x<=0 || y<=0 || x>horizontal || y>vertical)
+   			 	System.out.println("\n	==>Coordenadas incorrectas<== \n");
+   			 else
+   				 juego.jugar(t, x, y,horizontal,vertical);
+   		}while (x<=0 || y<=0 || x>horizontal || y>vertical);
+   		
+   	
+   		
+   		
+	}
 	
 	
 
