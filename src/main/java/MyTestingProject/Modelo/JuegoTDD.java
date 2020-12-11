@@ -4,7 +4,7 @@ package MyTestingProject.Modelo;
 
 public class JuegoTDD {
 	int intento=40;
-	int tminas=7;
+	int tminas=10;
 	public JuegoTDD() {}
 
 	public void jugar(TableroTDD tablero2, int x,int y,int horizontal,int vertical) {
