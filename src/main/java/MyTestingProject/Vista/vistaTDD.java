@@ -44,7 +44,7 @@ public class vistaTDD implements vistaITDD{
 	@Override
 	public int getMinas() {
 		// TODO Auto-generated method stub
-		return 10;
+		return 7;
 	}
 
 	@Override

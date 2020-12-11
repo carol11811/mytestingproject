@@ -85,12 +85,12 @@ public class BuscaminasTDD{
    			x=x-1;
    	   		y=y-1;
    			 
-   			 if(x<=0 || y<=0 || x>=horizontal || y>=vertical) {
+   			 if(x<0 || y<0 || x>=horizontal || y>=vertical) {
    				juego.setIntento(juego.getIntento()-1);
    			 	System.out.println("\n	==>Coordenadas incorrectas<== \n");
    			 }else {
    				 juego.jugar(t, x, y,horizontal,vertical);}
-   		}while ((x<=0 || y<=0 || x>horizontal || y>vertical)&&juego.getIntento()>0);
+   		}while ((x<=0 || y<=0 || x>horizontal || y>vertical)&&juego.getIntento()>0&& juego.getMinas()>0);
    		
    	
    		

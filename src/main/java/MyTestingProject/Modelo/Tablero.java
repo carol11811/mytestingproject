@@ -7,13 +7,13 @@ public class Tablero {
 	boolean created= true;
 
 	public Tablero(int horizontal,int vertical,boolean aleatorio, int totalMinas) {
-	if(horizontal==99||vertical==99 || horizontal<3|| vertical<3 ) {
+	if(horizontal>100||vertical>100 || horizontal<2|| vertical<2 ) {
 		created=false;
 	    System.out.println("Tamaño invalido de tablero");
 	}
 	
 	int size_array =horizontal*vertical;
-	if(size_array>=99*99|| size_array <=9) {
+	if(size_array>=100*100|| size_array <8) {
 		
 		created=false;
 	    System.out.println("Tamaño invalido de tablero");
@@ -43,7 +43,7 @@ public class Tablero {
 		    		z=Math.random()*vertical;  
 		       		w=(int)w;
 		       		z=(int)z;
-		       		if  (z!=0 && w!=0 && z!=horizontal-1 && w!=vertical-1){
+		       		if  (z!=horizontal-1 && w!=vertical-1){
 		         	tablero[(int)w][(int) z ]=1;
 		          	ntminas++;
 		          	
